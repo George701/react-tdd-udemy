@@ -8,9 +8,21 @@ class App extends Component {
         this.state = { gifts: [] };
     }
     render() {
+        const { gifts } = this.state;
         return (
             <div>
                 <h2>Gift Giver</h2>
+                <div className='gift-list'>
+                    {
+                        gifts.map((gift, index) => {
+                            return (
+                                <div key={index}>
+                                    {gift.id}
+                                </div>
+                            )
+                        })
+                    }
+                </div>
                 <Button className='btn-add' onClick={this.addGift}>Add Gift</Button>
             </div>
         )
