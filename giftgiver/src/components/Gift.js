@@ -25,6 +25,7 @@ class Gift extends Component {
                         {' '}
                         <Form.Control className='input-present' onChange={event => this.setState({present: event.target.value})} value={this.state.present}/>
                     </Form.Group>
+                    <Button className='btn-remove' onClick={() => this.props.removeGift(this.props.gift.id)}>Remove Gift</Button>
                 </Form>
             </div>
         )
