@@ -7,7 +7,7 @@ import { max_number } from '../helper'
 // npm run test -- --coverage --watchALL
 
 class App extends Component {
-    constructor(){
+    constructor() {
         super();
 
         this.state = { gifts: [] };
@@ -21,7 +21,7 @@ class App extends Component {
                     {
                         gifts.map((gift, index) => {
                             return (
-                                <Gift 
+                                <Gift
                                     key={index}
                                     gift={gift}
                                     removeGift={this.removeGift}
@@ -37,13 +37,13 @@ class App extends Component {
 
     addGift = () => {
         const { gifts } = this.state;
-        gifts.push({id: max_number(this.state.gifts.map(gift => gift.id))+1});
+        gifts.push({ id: max_number(this.state.gifts.map(gift => gift.id)) + 1 });
         this.setState({ gifts });
     };
 
     removeGift = id => {
         const gifts = this.state.gifts.filter(gift => gift.id !== id);
-        this.setState({gifts});
+        this.setState({ gifts });
     }
 }
 
