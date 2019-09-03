@@ -5,4 +5,18 @@ export const setBalance = balance => {
         type: types.SET_BALANCE,
         balance
     }
-}
+};
+
+export const deposit = deposit => {
+    return {
+        type: types.DEPOSIT,
+        deposit
+    }
+};
+
+export const withdraw = withdraw => {
+    return {
+        type: types.WITHDRAW,
+        withdraw
+    }
+};
