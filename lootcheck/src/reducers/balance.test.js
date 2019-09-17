@@ -1,16 +1,25 @@
 import balanceReducer from './balanceReducer';
+import balanceReducer2 from './balanceReducer';
 import * as types from '../actions/types';
-import { constants } from 'zlib';
 
 describe('balanceReducer', () => {
-    it('sets a balance', () => {
+    describe('when initializing', () => {
         const balance = 10;
 
-        expect(balanceReducer(undefined, {
-            type: types.SET_BALANCE,
-            balance
-        }))
-            .toEqual(balance);
+        it('sets a balance', () => {
+
+            expect(balanceReducer(undefined, {
+                type: types.SET_BALANCE,
+                balance
+            }))
+                .toEqual(balance);
+        });
+
+        describe('then re-initializing', () => {
+            it('reads the balance from cookies', () => {
+                expect(balanceReducer2(undefined, {})).toEqual(balance);
+            });
+        });
     });
 
     it('deposits into the balance', () => {
