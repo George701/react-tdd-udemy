@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Provider } from 'react-redux';
 import Wallet from './Wallet'
 import Loot from './Loot'
@@ -14,6 +14,7 @@ const App = () => {
                 <Wallet />
                 <hr />
                 <Loot />
+                <div>Powerd by <a rel="noopener noreferrer" href='https://www.coindesk.com/price' target='_blank'>Coindesk</a></div>
             </div>
         </Provider>
     )
