@@ -5,20 +5,18 @@ import Loot from './Loot'
 
 import store from '../store';
 
-class App extends Component {
-    render() {
-        return (
-            <Provider store={store}>
-                <div>
-                    <h2>Loot Check</h2>
-                    <hr />
-                    <Wallet />
-                    <hr />
-                    <Loot />
-                </div>
-            </Provider>
-        )
-    }
+const App = () => {
+    return (
+        <Provider store={store}>
+            <div>
+                <h2>Loot Check</h2>
+                <hr />
+                <Wallet />
+                <hr />
+                <Loot />
+            </div>
+        </Provider>
+    )
 }
 
 export default App;
